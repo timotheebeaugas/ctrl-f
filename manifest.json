@@ -1,0 +1,25 @@
+{
+
+    "manifest_version": 2,
+    "name": "Always search",
+    "version": "1.0",
+  
+    "description": "Permanent searching keywords on web pages.",
+    "homepage_url": "https://github.com/timotheebeaugas/ctrl-f",
+    "icons": {
+      "48": "icons/search-48.png"
+    },
+  
+    "permissions": [
+      "activeTab"
+    ],
+  
+    "browser_action": {
+      "default_icon": "icons/search-32.png",
+      "default_title": "Always search",
+      "default_popup": "popup/Always search.html"
+    },
+  
+    "web_accessible_resources": [
+    ]
+  }
