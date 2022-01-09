@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Always search",
-    "version": "1.0",
+    "version": "3.0",
   
     "description": "Permanent searching words on web pages. It's like Ctrl + F on all tabs.",
     "homepage_url": "https://github.com/timotheebeaugas/ctrl-f",
