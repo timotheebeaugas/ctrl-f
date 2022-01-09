@@ -4,22 +4,27 @@
     "name": "Always search",
     "version": "1.0",
   
-    "description": "Permanent searching keywords on web pages.",
+    "description": "Permanent searching words on web pages. It's like Ctrl + F on all tabs.",
     "homepage_url": "https://github.com/timotheebeaugas/ctrl-f",
     "icons": {
       "48": "icons/search-48.png"
     },
   
     "permissions": [
-      "activeTab"
+      "activeTab",
+      "tabs",
+      "<all_urls>",
+      "storage"
     ],
+
+    "content_scripts": [ {
+      "matches": ["<all_urls>"],
+      "js": ["scripts/highlight.js", "popup/script.js"]
+    }],
   
     "browser_action": {
       "default_icon": "icons/search-32.png",
       "default_title": "Always search",
-      "default_popup": "popup/Always search.html"
-    },
-  
-    "web_accessible_resources": [
-    ]
+      "default_popup": "popup/index.html"
+    }  
   }
