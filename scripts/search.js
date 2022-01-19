@@ -24,7 +24,7 @@ let results = []
     // search each words in the web page
     array.forEach(word => 
       {
-      let regex = new RegExp(word,"g"); //i
+      let regex = new RegExp(word,"ig"); //i
       let found = body.match(regex);
       if(found){
         let obj = {
