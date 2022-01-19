@@ -4,7 +4,7 @@ async function gotLocalStorage() {
     return obj.savedWords;
 }
 
-// IIFE
+// IIFE 
 (async function(){
     if(await gotLocalStorage()){
         document.getElementById("textarea").innerHTML = await gotLocalStorage();
@@ -12,30 +12,28 @@ async function gotLocalStorage() {
   })();
 
 
-// auto save
+// textarea auto save
 document.getElementById("textarea").addEventListener('input', function (e) {
     browser.storage.local.set(
-        { "savedWords": document.getElementById("textarea").value }             // object
+        { "savedWords": document.getElementById("textarea").value }            
     )
 });
 
 
-// click : clear
+// click : clear textarea and localstorage
 document.getElementById("clear").addEventListener("click", async function (e) {
     e.preventDefault();
     browser.storage.local.set(
         { "savedWords": "" }             
     )
     document.getElementById("textarea").value = await gotLocalStorage();
-    browser.tabs.executeScript({file: "../scripts/erase.js"})
 });
 
-// click : search
+// click : search 
 document.getElementById("search").addEventListener("click", async function (e) {
     e.preventDefault();
   
     if(await gotLocalStorage()){
-        browser.tabs.executeScript({file: "../scripts/highlight.js"})
+        browser.tabs.executeScript({file: "../scripts/search.js"})
     }
 });
-
