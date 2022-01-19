@@ -35,9 +35,10 @@ let results = []
       }
     });
 
-    // return results as a string if exist
+    
     if(results.length > 0)
 
+    // return results as a string
     function result(){
       a = []
       results.forEach(x => 
@@ -47,7 +48,6 @@ let results = []
     }
 
     // send a notification on the web page like a popup
-
     let style = document.createElement('style');
 
     style.innerHTML = `
@@ -89,7 +89,7 @@ let results = []
     div.innerHTML = result()
     document.body.appendChild(div); 
 
-    // code notification after 10 seconds
+    // remove notification after 10 seconds
     window.setTimeout(closeForm, 10000)
 
   }
