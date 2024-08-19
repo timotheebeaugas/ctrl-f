@@ -1,4 +1,4 @@
-# Alwas search 
+# Always search 
 Firefox extension for find words in webpage anytime.   
 It is like a persistent CTRL+F for all tabs.
     
